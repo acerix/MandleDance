@@ -5,6 +5,7 @@ uniform vec2 position = vec2(0, -0.75);
 uniform float zoom: hint_range(0, 15) = 1;
 uniform float ratio = 1;
 uniform float now = 3;
+uniform float two = 2.0;
 uniform sampler2D palette_image;
 
 vec4 mandelbrot(vec2 c) {
@@ -13,7 +14,8 @@ vec4 mandelbrot(vec2 c) {
 	int i = 0;
 
 	while (z2.x + z2.y <= 4.0 && ++i < iteration_limit) {
-		z = vec2(2.0 * z.y * z.x + c.x, z2.y - z2.x + c.y);
+		//z = vec2(2.0 * z.y * z.x + c.x, z2.y - z2.x + c.y);
+		z = vec2(two * z.y * z.x + c.x, z2.y - z2.x + c.y);
 		z2 = z * z;
 	}
 

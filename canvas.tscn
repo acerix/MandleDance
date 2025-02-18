@@ -11,6 +11,7 @@ shader_parameter/position = Vector2(0, -0.75)
 shader_parameter/zoom = 1.0
 shader_parameter/ratio = 1.0
 shader_parameter/now = 1.0
+shader_parameter/two = 2.0
 shader_parameter/palette_image = ExtResource("2_j16xo")
 
 [node name="Canvas" type="ColorRect"]

@@ -8,14 +8,21 @@ func _input(_event):
 
 var bpm : float = 140
 var beat_factor : float = 60 / bpm
+var start : float = Time.get_unix_time_from_system()
+var p = Vector2(0, -0.75);
 
 func _process(_delta):
-	var theta = 2 * PI * Time.get_unix_time_from_system() / beat_factor
-	var f1 = sin(theta)
-	var f2 = cos(theta / 21)
-	var f3 = sin(theta / 29)
-	var f4 = tan(theta / 101)
-	var f5 = tan(theta / 1001)
-	var f6 = sin(64 * theta)
-	var f7 = cos(theta / 101)
-	$".".material.set("shader_parameter/zoom", f1 * f2 * f3 * f4 * f5 * f7)
+	var time = Time.get_unix_time_from_system()
+	var delta = time - start
+	var theta = 2 * PI * delta / beat_factor
+	var f1 = 0.7 * sin(theta / 4)
+	var f3 = sin(theta / 7)
+	var f2 = 1.3 * sin(theta / 16)
+	var f4 = 3 * sin(theta / 96)
+	var zoom = 0.2 * f1 * f2 * f3 * f4 + sin(delta) / 8
+	p.x = 0.5 * cos(theta / 101) * cos(theta / 103)
+	p.y = -0.75 + 0.5 * sin(theta / 101) * sin(theta / 104) + sin(theta) / 32
+	var two = 2.0 + tan(theta / 64)
+	$".".material.set("shader_parameter/position", p) 
+	$".".material.set("shader_parameter/zoom", zoom)
+	$".".material.set("shader_parameter/two", two)
