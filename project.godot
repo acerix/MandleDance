@@ -13,7 +13,7 @@ config_version=5
 config/name="Mandlebrot Shader"
 config/version="0.0.1"
 run/main_scene="res://canvas.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]
 
