@@ -8,9 +8,8 @@
 shader = ExtResource("1_kjx0r")
 shader_parameter/iteration_limit = 500
 shader_parameter/position = Vector2(0, -0.75)
-shader_parameter/zoom = 1.0
+shader_parameter/zoom = 0.2
 shader_parameter/ratio = 1.0
-shader_parameter/now = 1.0
 shader_parameter/two = 2.0
 shader_parameter/palette_image = ExtResource("2_j16xo")
 
@@ -21,5 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0, 0.411765, 1)
 script = ExtResource("3_n3t7b")
-metadata/_edit_group_ = true

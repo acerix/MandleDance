@@ -2,9 +2,8 @@ shader_type canvas_item;
 
 uniform int iteration_limit = 256;
 uniform vec2 position = vec2(0, -0.75);
-uniform float zoom: hint_range(0, 15) = 1;
+uniform float zoom: hint_range(0, 15) = 0.2;
 uniform float ratio = 1;
-uniform float now = 3;
 uniform float two = 2.0;
 uniform sampler2D palette_image;
 
@@ -28,7 +27,8 @@ vec4 mandelbrot(vec2 c) {
 
 vec3 palette(vec4 m) {
 	int color_count = textureSize(palette_image, 0).x - 1;
-	if (m.w == 1.0) {
+	// if (m.w == 1.0) { // floating-point comparison may not be true
+	if (abs(m.w - 1.0) < 0.0001) { // approximate but predictable
 		return texelFetch(palette_image, ivec2(0, 0), 0).rgb;
 	}
 	vec3 color1 = texelFetch(palette_image, ivec2(1 + int(m.z) % color_count, 0), 0).rgb;
