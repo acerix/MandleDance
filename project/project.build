@@ -370,6 +370,7 @@
 		"TLSOptions",
 		"TabBar",
 		"TextEdit",
+		"TextFile",
 		"TextLine",
 		"TextParagraph",
 		"TextServer",
