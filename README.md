@@ -9,4 +9,4 @@ The zoom and position of the plane are varied over time using trigonometric func
 [Web (HTML5) Export](https://acerix.github.io/MandelDance/) (requires WebGL)
 
 # Screenshot
-![Screenshot of the initial rendering of MandelDance](/screenshot.png?raw=true "Initial rendering of MandelDance")
+![Screenshot of the initial rendering of MandelDance](/project/screenshot.png?raw=true "Initial rendering of MandelDance")
