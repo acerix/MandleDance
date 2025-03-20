@@ -10,8 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Mandeldance"
-config/description="A dancer animation of the Mandelbrot Set."
+config/name="MandelDance"
 config/version="0.0.2"
 config/tags=PackedStringArray("shader", "template")
 run/main_scene="res://canvas.tscn"
