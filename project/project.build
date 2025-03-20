@@ -11,7 +11,6 @@
 		"module_text_server_adv_enabled": false,
 		"opengl3": false,
 		"openxr": false,
-		"rendering_device": false,
 		"vulkan": false
 	},
 	"disabled_classes": [
